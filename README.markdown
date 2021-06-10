@@ -9,6 +9,27 @@ Container creates Jupyter notebook on local computer.
 ## Requirements:
 Docker
 
+## Pull image from Docker hub 
+After installing docker, pull the repository from docker hub. 
+
+```docker pull drbueno/python-single-cell```
+
+## Using Mac or Ubuntu 
+Download repo start.sh script. Open command line window, and change directory to where repo was downloaded to. 
+
+Set the local working directory as environment (env) variable. 
+
+```export DIR=/your/work/dir```
+
+- in  start.sh ```DIR``` is the env variable. If you change env name, also change env name in start.sh
+
+Once env variable to is set, run script. 
+
+```bash start.sh```
+
+
+Jupyter lab should pop up in browser or click the link with IP address. 
+
 
 
 
