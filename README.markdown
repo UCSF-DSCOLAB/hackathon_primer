@@ -28,7 +28,7 @@ Once env variable to is set, run script.
 ```bash start.sh```
 
 
-Jupyter lab should pop up in browser or click the link with IP address. 
+Jupyter lab should pop up in browser or follow instructions to copy and paste link with IP address to a web browser. 
 
 
 
