@@ -15,7 +15,7 @@ After installing docker, pull the repository from docker hub.
 ```docker pull drbueno/python-single-cell```
 
 ## Using Mac or Ubuntu 
-Download repo. Open command line window, and change directory to where repo was downloaded to. 
+Clone repo. Open command line window, and change directory to where repo was downloaded to. 
 
 Set the local working directory as environment (env) variable. 
 
