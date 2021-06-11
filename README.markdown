@@ -14,21 +14,29 @@ After installing docker, pull the repository from docker hub.
 
 ```docker pull drbueno/python-single-cell```
 
-## Using Mac or Ubuntu 
+## How to Run Using Mac or Ubuntu 
 Clone repo. Open command line window, and change directory to where repo was downloaded to. 
 
-Set the local working directory as environment (env) variable. 
+Run 
+```./start.sh```
 
-```export DIR=/your/work/dir```
+You will be prompted to set your working directory. This is the directory where the data lives. 
+ALL work must be done in this directory. It will be mounted inside the container in ```/home/data```
 
-- in  start.sh ```DIR``` is the env variable. If you change env name, also change env name in start.sh
-
-Once env variable to is set, run script. 
-
-```bash start.sh```
+After entering the path of your local work directory, follow instructions to copy and paste link with 
+IP address to a web browser.
 
 
-Jupyter lab should pop up in browser or follow instructions to copy and paste link with IP address to a web browser. 
+## Running Scanpy Tutorial
+
+The Jupyter Notebook with Scanpy tutorial for Preprocessing and clustering 3k PBMCs path is here:
+```/home/tutorial/```
+
+Open Jupyter notebook file ```scanpy-tutorial.ipynb``` and run tutorial. 
+
+
+
+
 
 
 
