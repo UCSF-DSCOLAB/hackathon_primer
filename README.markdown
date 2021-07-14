@@ -1,10 +1,10 @@
-# Python Single Cell Notebook
-This repo contains the Dockerfile and sample data with tutorial used to create the python-single-cell-notebook container. 
+# Python and R Single Cell Notebook
+This repo contains the Dockerfile and sample data with tutorial used to create the single-cell-notebook container.
 
-This container comes pre-installed basic single cell tools in Python (3.8). Sample Data with tutorial also included.
+This container comes pre-installed basic single cell tools in Python (3.8) and R (4.0.1). Sample Data with tutorial also included.
 
 Container creates Jupyter notebook on local computer. 
-- Users can start analyzing single cell sequencing data with Scanpy, plotting with seaborn, modeling with scipy, etc.  
+- Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
 
 ## Requirements:
 Docker
@@ -12,7 +12,7 @@ Docker
 ## Pull image from Docker hub 
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/python-single-cell```
+```docker pull drbueno/single-cell-nb ```
 
 ## How to Run Using Mac or Ubuntu 
 Clone repo. Open command line window, and change directory to where repo was downloaded to. 
@@ -32,7 +32,9 @@ IP address to a web browser.
 The Jupyter Notebook with Scanpy tutorial for Preprocessing and clustering 3k PBMCs path is here:
 ```/home/tutorial/```
 
-Open Jupyter notebook file ```scanpy-tutorial.ipynb``` and run tutorial. 
+Open Jupyter notebook file ```scanpy-tutorial.ipynb``` and run tutorial for python.
+
+Open Jupyter notebook file ```R-tutorial.ipynb``` and run tutorial for R. 
 
 
 

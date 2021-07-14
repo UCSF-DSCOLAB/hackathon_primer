@@ -15,7 +15,8 @@ ENV PATH=/opt/conda/envs/work/bin/:${PATH}
 WORKDIR /home/tutorial
 
 COPY example-data .
-COPY scanpy-tutorial.ipynb .
+COPY python-tutorial.ipynb .
+COPY R-tutorial.ipynb .
 
 WORKDIR /home
 
