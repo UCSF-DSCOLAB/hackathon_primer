@@ -32,7 +32,7 @@ IP address to a web browser.
 The Jupyter Notebook with Scanpy tutorial for Preprocessing and clustering 3k PBMCs path is here:
 ```/home/tutorial/```
 
-Open Jupyter notebook file ```scanpy-tutorial.ipynb``` and run tutorial for python.
+Open Jupyter notebook file ```python-tutorial.ipynb``` and run tutorial for python.
 
 Open Jupyter notebook file ```R-tutorial.ipynb``` and run tutorial for R. 
 
