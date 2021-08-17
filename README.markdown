@@ -14,7 +14,7 @@ Docker
 ## Pull image from Docker hub
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/single-cell-nb ```
+```docker pull drbueno/single-cell-nb:latest ```
 
 ## How to Run Using Mac or Ubuntu 
 Clone ```python-container``` repo. Open command line window, and change directory to where repo was downloaded to. 
@@ -80,7 +80,7 @@ Go to a web browser and visit
 
 Log in with username ```rstudio``` and password ```@hackathon2021```
 
-To see the tutorial, open  the ```.Rmd``` or ```.html``` file in ```/tutorial```
+To see the tutorial, open  the ```.Rmd``` file in ```/tutorial```
 
 # How to use with R or R-studio that is already installed on your computer. 
 

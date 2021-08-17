@@ -13,6 +13,5 @@ COPY example-data .
 WORKDIR /tutorial
 
 COPY single-cell-tutorial.Rmd .
-COPY single-cell-tutorial.nb.html .
 
 WORKDIR /home
