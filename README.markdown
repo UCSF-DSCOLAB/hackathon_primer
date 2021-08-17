@@ -5,8 +5,7 @@ analysis for both python and R-studio.
 The container comes pre-installed with basic single cell tools in Python (3.8) and R (4.1.1). 
 Sample Data with tutorial also included.
 
-Container creates Jupyter notebook on local computer. 
-- Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
+Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
 
 ## Requirements:
 Docker
@@ -87,7 +86,7 @@ To see the tutorial, open  the ```.Rmd``` or ```.html``` file in ```/tutorial```
 
 Clone the ```rstudio-container``` repo. 
 
-Change directory to repo and run 
+Change directory to repo, open the command line and run 
 
 ```Rscript install_monocle_and_R_dependencies.R```
 
