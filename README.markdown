@@ -90,7 +90,7 @@ Change directory to repo, open the command line and run
 
 ```Rscript install_monocle_and_R_dependencies.R```
 
-The R should have all packages installed needed for single-cell analysis. 
+Your local R or R-studio should have all packages installed needed for single-cell analysis. 
 
 
 
