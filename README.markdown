@@ -19,7 +19,7 @@ After installing docker, pull the repository from docker hub.
 ## How to Run Using Mac or Ubuntu 
 Clone ```python-container``` repo. Open command line window, and change directory to where repo was downloaded to. 
 
-Run 
+Run (recommned to run under screen)
 ```./start.sh```
 
 You will be prompted to set your working directory. This is the directory where the data lives. 
@@ -50,7 +50,7 @@ Activate single-cell environment.
 
 ```conda activate single-cell```
 
-Start a jupyter notebook.
+Start a jupyter notebook (recommend to run under screen).
 
 ```jupyter lab```
 
@@ -82,6 +82,7 @@ Log in with username ```rstudio``` and password ```@hackathon2021```
 
 To see the tutorial, open  the ```.Rmd``` file in ```/tutorial```
 
+
 # How to use with R or R-studio that is already installed on your computer. 
 
 Clone the ```rstudio-container``` repo. 
@@ -92,9 +93,12 @@ Change directory to repo, open the command line and run
 
 Your local R or R-studio should have all packages installed needed for single-cell analysis. 
 
+# How to stop Container
+When the Hackathon is complete. You can stop the container from running.
 
+To see all containers running, type in command line ```docker ps``` 
 
-
+To stop containers run  ```docker stop <CONTAINER ID>```
 
 
 
