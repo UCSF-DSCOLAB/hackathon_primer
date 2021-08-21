@@ -1,6 +1,11 @@
 # Hackathon Single Cell Notebook
+Clone this repo to your computer. 
+
+```git clone https://github.com/raybueno/Hackathon-2021.git```
+
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
 analysis for both python and R-studio.
+
 
 The container comes pre-installed with basic single cell tools in Python (3.8) and R (4.1.1). 
 Sample Data with tutorial also included.
@@ -17,9 +22,9 @@ After installing docker, pull the repository from docker hub.
 ```docker pull drbueno/single-cell-nb:latest ```
 
 ## How to Run Using Mac or Ubuntu 
-Clone ```python-container``` repo. Open command line window, and change directory to where repo was downloaded to. 
+Change directory to ```python-container```. 
 
-Run (recommned to run under screen)
+Run (recommended to run under screen)
 ```./start.sh```
 
 You will be prompted to set your working directory. This is the directory where the data lives. 
@@ -40,7 +45,7 @@ Open Jupyter notebook file ```python-tutorial.ipynb``` and run tutorial for pyth
 Install conda. 
 <https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>
 
-Clone ```python-container``` repo. Change directory to ```container/```
+Change directory to ```python-container```. 
 
 Create single-cell conda environment. 
 
@@ -50,7 +55,7 @@ Activate single-cell environment.
 
 ```conda activate single-cell```
 
-Start a jupyter notebook (recommend to run under screen).
+Start a jupyter notebook (recommended to run under screen).
 
 ```jupyter lab```
 
@@ -66,10 +71,9 @@ After installing docker, pull the repository from docker hub.
 ```docker pull drbueno/rstudio-single-cell:latest ```
 
 ## How to Run Using Mac or Ubuntu 
-Clone ```rstudio-container```repo. Open command line window, and change directory to where repo was downloaded to. 
+Change directory to ```rstudio-container```. 
 
-Run 
-```./start.sh```
+Run ```./start.sh```
 
 You will be prompted to set your working directory. This is the directory where the data lives. 
 ALL work must be done in this directory. It will be mounted inside the container in ```/home```
@@ -93,12 +97,19 @@ Change directory to repo, open the command line and run
 
 Your local R or R-studio should have all packages installed needed for single-cell analysis. 
 
+# Installing other packages when using the Docker Containers
+If you are going to install other packages, DO NOT stop your containers. If you stop your
+containers, the packages that were installed will not exist when you restart the container. 
+Instead run the ```./start.sh ```
+under ```screen```. When the Hackathon is complete, stop the container. 
+
 # How to stop Container
 When the Hackathon is complete. You can stop the container from running.
 
 To see all containers running, type in command line ```docker ps``` 
 
 To stop containers run  ```docker stop <CONTAINER ID>```
+
 
 
 
