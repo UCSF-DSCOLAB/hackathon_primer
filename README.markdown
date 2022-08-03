@@ -1,13 +1,13 @@
 # Hackathon Single Cell Notebook
 Clone this repo to your computer. 
 
-```git clone https://github.com/raybueno/Hackathon-2021.git```
+```git clone https://github.com/raybueno/UCSF_HACKATHON_PRIMER.git```
 
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
 analysis for both python and R-studio.
 
 
-The container comes pre-installed with basic single cell tools in Python (3.8) and R (4.1.1). 
+The container comes pre-installed with basic single cell tools in Python and R. 
 Sample Data with tutorial also included.
 
 Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
@@ -111,7 +111,13 @@ To see all containers running, type in command line ```docker ps```
 To stop containers run  ```docker stop <CONTAINER ID>```
 
 
+# Controlling CPU, Memory, etc.   usage of the container
+1. Click docker app icon on your computer. 
+2. Click on the setting icon 
+3. Once in settings, click on Resources
+4. Change the parameters based on need (in the 2021 Hackathon, memory was an issue.)
 
+![img.png](img.png)
 
 
 
