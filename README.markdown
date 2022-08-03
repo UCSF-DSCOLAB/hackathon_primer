@@ -111,7 +111,13 @@ To see all containers running, type in command line ```docker ps```
 To stop containers run  ```docker stop <CONTAINER ID>```
 
 
+# Controlling CPU, Memory, etc.   usage of the container
+1. Click docker app icon on your computer. 
+2. Click on the setting icon 
+3. Once in settings, click on Resources
+4. Change the parameters based on need (in the 2021 Hackathon, memory was an issue.)
 
+![img.png](img.png)
 
 
 
