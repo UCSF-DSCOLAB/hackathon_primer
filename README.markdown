@@ -1,7 +1,7 @@
 # Hackathon Single Cell Notebook
 Clone this repo to your computer. 
 
-```git clone https://github.com/raybueno/Hackathon-2021.git```
+```git clone https://github.com/raybueno/UCSF_HACKATHON_PRIMER.git```
 
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
 analysis for both python and R-studio.
