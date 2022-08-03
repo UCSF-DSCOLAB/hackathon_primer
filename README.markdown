@@ -7,7 +7,7 @@ This repo contains the Dockerfile and sample data with tutorial used to create t
 analysis for both python and R-studio.
 
 
-The container comes pre-installed with basic single cell tools in Python (3.8) and R (4.1.1). 
+The container comes pre-installed with basic single cell tools in Python and R. 
 Sample Data with tutorial also included.
 
 Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
