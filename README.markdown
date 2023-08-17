@@ -33,6 +33,16 @@ ALL work must be done in this directory. It will be mounted inside the container
 After entering the path of your local work directory, follow instructions to copy and paste link with 
 IP address to a web browser.
 
+### If you are using an M1/M2 Mac
+
+Be sure to have: 
+
+- The latest version of Docker
+
+And in Docker Settings:
+
+- General -> User Virtualization Framework -> ON
+- Features in development -> User Rosetta for x86/amd64 emulation on Apple Silicon -> ON
 
 ## Running Scanpy Tutorial
 
