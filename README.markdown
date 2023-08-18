@@ -1,7 +1,7 @@
 # Hackathon Single Cell Notebook
 Clone this repo to your computer. 
 
-```git clone https://github.com/raybueno/UCSF_HACKATHON_PRIMER.git```
+```git clone git@github.com:UCSF-DSCOLAB/hackathon_primer.git```
 
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
 analysis for both python and R-studio.
@@ -17,11 +17,13 @@ Users can start analyzing single cell sequencing data with Scanpy in python or S
 
 Note: The easiest way to install and use docker, is via docker desktop: https://www.docker.com/products/docker-desktop/
 
+Be sure to select the appropriate installation for you Macbook machine. 
+
 # Running Python Container
 ## Pull image from Docker hub
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/single-cell-nb:latest ```
+```docker pull drbueno/single-cell-nb:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```python-container```. 
@@ -34,8 +36,7 @@ ALL work must be done in this directory. It will be mounted inside the container
 
 An example of working directory: `/Users/hackathon-user/UCSF_HACKATHON_PRIMER/python-container/data`
 
-After entering the path of your local work directory, follow instructions to copy and paste link with 
-IP address to a web browser.
+After entering the path of your local work directory, follow instructions to copy and paste link with IP address to a web browser.
 
 ### If you are using an M1/M2 Mac
 
@@ -82,7 +83,7 @@ analyzing your data.
 ## Pull image from Docker hub
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/rstudio-single-cell:latest ```
+```docker pull drbueno/rstudio-single-cell:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```rstudio-container```. 
