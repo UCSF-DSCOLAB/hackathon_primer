@@ -1,7 +1,7 @@
 # Hackathon Single Cell Notebook
 Clone this repo to your computer. 
 
-```git clone https://github.com/raybueno/UCSF_HACKATHON_PRIMER.git```
+```git clone git@github.com:UCSF-DSCOLAB/hackathon_primer.git```
 
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
 analysis for both python and R-studio.
@@ -13,13 +13,17 @@ Sample Data with tutorial also included.
 Users can start analyzing single cell sequencing data with Scanpy in python or Seurat in R.   
 
 ## Requirements:
-Docker
+- Docker
+
+Note: The easiest way to install and use docker, is via docker desktop: https://www.docker.com/products/docker-desktop/
+
+Be sure to select the appropriate installation for you Macbook machine. 
 
 # Running Python Container
 ## Pull image from Docker hub
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/single-cell-nb:latest ```
+```docker pull drbueno/single-cell-nb:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```python-container```. 
@@ -30,9 +34,20 @@ Run (recommended to run under screen)
 You will be prompted to set your working directory. This is the directory where the data lives. 
 ALL work must be done in this directory. It will be mounted inside the container in ```/home/data```
 
-After entering the path of your local work directory, follow instructions to copy and paste link with 
-IP address to a web browser.
+An example of working directory: `/Users/hackathon-user/UCSF_HACKATHON_PRIMER/python-container/data`
 
+After entering the path of your local work directory, follow instructions to copy and paste link with IP address to a web browser.
+
+### If you are using an M1/M2 Mac
+
+Be sure to have: 
+
+- The latest version of Docker
+
+And in Docker Settings (using docker desktop):
+
+- General -> User Virtualization Framework -> ON
+- Features in development -> User Rosetta for x86/amd64 emulation on Apple Silicon -> ON
 
 ## Running Scanpy Tutorial
 
@@ -68,7 +83,7 @@ analyzing your data.
 ## Pull image from Docker hub
 After installing docker, pull the repository from docker hub. 
 
-```docker pull drbueno/rstudio-single-cell:latest ```
+```docker pull drbueno/rstudio-single-cell:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```rstudio-container```. 
@@ -77,6 +92,8 @@ Run ```./start.sh```
 
 You will be prompted to set your working directory. This is the directory where the data lives. 
 ALL work must be done in this directory. It will be mounted inside the container in ```/home```
+
+An example of working directory: `/Users/hackathon-user/UCSF_HACKATHON_PRIMER/rstudio-container/data`
 
 Go to a web browser and visit 
 
