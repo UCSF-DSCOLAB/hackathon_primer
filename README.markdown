@@ -2,7 +2,9 @@
 Clone this repo to your computer. 
 
 ```git clone git@github.com:UCSF-DSCOLAB/hackathon_primer.git```
+
 OR
+
 ```git clone https://github.com/UCSF-DSCOLAB/hackathon_primer.git```
 
 This repo contains the Dockerfile and sample data with tutorial used to create the hackathon containers for single-cell 
