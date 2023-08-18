@@ -103,7 +103,7 @@ Go to a web browser and visit
 
 ```localhost:8787```
 
-Log in with username ```rstudio``` and password ```@hackathon2021```
+Log in with username ```rstudio``` and password ```@hackathon2023```
 
 To see the tutorial, open  the ```.Rmd``` file in ```/tutorial```
 
