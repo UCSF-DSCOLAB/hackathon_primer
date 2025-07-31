@@ -21,4 +21,4 @@ COPY python-tutorial.ipynb .
 WORKDIR /home
 
 # CMD ["jupyter", "lab", "--allow-root", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
-CMD ["/bin/bash", "-c", "source ~/.bashrc && conda activate single-cell && jupyter lab --allow-root --port=8888 --no-browser --ip=0.0.0.0"]
+CMD ["/bin/bash", "-c", "source ~/.bashrc && conda activate single-cell && jupyter lab --allow-root --port=1037 --no-browser --ip=0.0.0.0"]
