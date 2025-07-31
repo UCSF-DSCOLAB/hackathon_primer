@@ -24,10 +24,6 @@ Note: The easiest way to install and use docker, is via docker desktop: https://
 Be sure to select the appropriate installation for you Macbook machine. 
 
 # Running Python Container
-## Pull image from Docker hub
-After installing docker, pull the repository from docker hub. 
-
-```docker pull drbueno/single-cell-nb:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```python-container```. 
@@ -83,11 +79,6 @@ Choose what kernel you want to work with and start
 analyzing your data. 
 
 # Running R-studio container 
-
-## Pull image from Docker hub
-After installing docker, pull the repository from docker hub. 
-
-```docker pull drbueno/rstudio-single-cell:latest```
 
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```rstudio-container```. 
