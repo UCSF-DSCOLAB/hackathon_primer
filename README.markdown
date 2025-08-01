@@ -34,7 +34,7 @@ Run (recommended to run under screen)
 You will be prompted to set your working directory. This is the directory where the data lives. 
 ALL work must be done in this directory. It will be mounted inside the container in ```/home/data```
 
-An example of working directory: `/Users/hackathon-user/UCSF_HACKATHON_PRIMER/python-container/data`
+An example of working directory: `/Users/your-user-name/hackathon2025/UCSF_HACKATHON_PRIMER/python-container/data`
 
 After entering the path of your local work directory, follow instructions to copy and paste link with IP address to a web browser.
 
@@ -88,13 +88,13 @@ Run ```./start.sh```
 You will be prompted to set your working directory. This is the directory where the data lives. 
 ALL work must be done in this directory. It will be mounted inside the container in ```/home```
 
-An example of working directory: `/Users/hackathon-user/UCSF_HACKATHON_PRIMER/rstudio-container/data`
+An example of working directory: `/Users/your-user-name/hackathon2025/UCSF_HACKATHON_PRIMER/rstudio-container/data`
 
 Go to a web browser and visit 
 
 ```localhost:8787```
 
-Log in with username ```rstudio``` and password ```@hackathon2023```
+Log in with username ```rstudio``` and password ```@hackathon2025```
 
 To see the tutorial, open  the ```.Rmd``` file in ```/tutorial```
 
@@ -127,7 +127,7 @@ To stop containers run  ```docker stop <CONTAINER ID>```
 1. Click docker app icon on your computer. 
 2. Click on the setting icon 
 3. Once in settings, click on Resources
-4. Change the parameters based on need (in the 2021 Hackathon, memory was an issue.)
+4. Change the parameters based on need (in the 2023 Hackathon, memory was an issue.)
 
 ![img.png](img.png)
 
