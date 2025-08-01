@@ -1,52 +1,31 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-IMAGE_TAG="single-cell-nb:local"
-CONTAINER_NAME="single-cell-nb"
-HOST_PORT=1037
+# Configuration (edit to taste)
+IMAGE="alaaatya/single-cell-nb:latest"   
+CONTAINER_NAME="single-cell-nb-test"
+HOST_PORT=1037                           
 
-# 0. Helper: calculate digest of build context (Dockerfile + files it COPYs)
-context_hash() {
-  # Hash the exact directory Docker sees during `docker build .`
-  # Use sha256sum if available (Linux); otherwise fall back to shasum -a 256 (macOS)
-  if command -v sha256sum >/dev/null 2>&1; then
-    tar -cf - --exclude='.git' . | sha256sum | awk '{print $1}'
-  else
-    tar -cf - --exclude='.git' . | shasum -a 256 | awk '{print $1}'
-  fi
-}
-
-# 1. Ask for host directory and make it absolute
-read -erp "📂  Mount path (/home/data): " HOST_DIR
-[[ $HOST_DIR == ~* ]] && HOST_DIR="$HOME${HOST_DIR#\~}"
-[[ $HOST_DIR != /* ]] && HOST_DIR="$(pwd)/$HOST_DIR"
+# 1. Ask for a host folder to mount at /home/data
+read -erp "📂  Path you’d like to mount inside the container (/home/data): " HOST_DIR
+[[ $HOST_DIR == ~* ]] && HOST_DIR="$HOME${HOST_DIR#\~}"   # expand ~
+[[ $HOST_DIR != /* ]] && HOST_DIR="$(pwd)/$HOST_DIR"      # make absolute
 mkdir -p "$HOST_DIR"
 
-# 2. Platform override (Apple-silicon → x86 image)
+# 2. Apple-silicon machines need the amd64 variant of the image
 PLATFORM_FLAG=""
 [[ $(uname -m) == "arm64" ]] && PLATFORM_FLAG="--platform linux/amd64"
 
-# 3. Rebuild only when context changed
-CTX_HASH=$(context_hash)
-LABEL_KEY="scnb.context_sha"
-CURRENT_HASH=$(docker image inspect "$IMAGE_TAG" \
-               --format "{{ index .Config.Labels \"$LABEL_KEY\" }}" 2>/dev/null || echo "")
+# 3. Always pull the latest layers for this tag
+echo "🔄  Pulling $IMAGE …"
+docker pull $PLATFORM_FLAG "$IMAGE"
 
-if [[ "$CTX_HASH" != "$CURRENT_HASH" ]]; then
-  echo "🔨  Building image ($IMAGE_TAG)…"
-  docker build $PLATFORM_FLAG \
-    --label "$LABEL_KEY=$CTX_HASH" \
-    -t "$IMAGE_TAG" .
-else
-  echo "✅  Dockerfile unchanged — skipping build"
-fi
-
-# 4. Launch Jupyter from /home so you can see tutorial + data
-echo "🚀  JupyterLab at http://localhost:${HOST_PORT}"
+# 4. Run the Jupyter notebook container
+echo "🚀  Open http://localhost:${HOST_PORT} after the token prints ⏳"
 docker run -it --rm \
   $PLATFORM_FLAG \
   -p "${HOST_PORT}:1037" \
   -v "${HOST_DIR}:/home/data" \
   -w /home \
   --name "$CONTAINER_NAME" \
-  "$IMAGE_TAG"
+  "$IMAGE"
