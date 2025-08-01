@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 # Configuration (edit to taste)
 IMAGE="alaaatya/single-cell-nb:latest"   
-CONTAINER_NAME="single-cell-nb-test"
+CONTAINER_NAME="single-cell-nb"
 HOST_PORT=1037                           
 
 # 1. Ask for a host folder to mount at /home/data
