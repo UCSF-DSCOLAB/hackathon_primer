@@ -80,6 +80,13 @@ analyzing your data.
 
 # Running R-studio container 
 
+## Build Locally
+
+1. `$ git clone https://github.com/UCSF-DSCOLAB/hackathon_primer.git`
+2. `$ cd hackathon_primer/rstudio-container`   
+(you'll need to update this to the path of wherever you cloned the repo!)
+3. `$ docker build -t hackathon_r .`
+
 ## How to Run Using Mac or Ubuntu 
 Change directory to ```rstudio-container```. 
 

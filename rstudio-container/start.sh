@@ -8,16 +8,15 @@ architecture=$(uname -m)
 if [ "$architecture" == "arm64" ]; then
     docker run -d --rm \
      -p 8787:8787 \
-     -e PASSWORD=@hackathon2023 \
+     -e PASSWORD=@hackathon2025 \
      -v $dir:/home \
-     --platform linux/x86_64 \
-       drbueno/rstudio-single-cell
+     hackathon_r
     echo "please navigate to: http://localhost:8787/"
 else
     docker run -d --rm \
      -p 8787:8787 \
-     -e PASSWORD=@hackathon2023 \
+     -e PASSWORD=@hackathon2025 \
      -v $dir:/home \
-     drbueno/rstudio-single-cell
+     hackathon_r
     echo "please navigate to: http://localhost:8787/"
 fi
