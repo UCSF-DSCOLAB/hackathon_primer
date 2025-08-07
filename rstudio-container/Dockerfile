@@ -19,6 +19,7 @@ RUN apt-get update && \
 
 # 0  Install R packages as root
 WORKDIR /home/rstudio
+
 COPY install_monocle_and_R_dependencies.R .
 RUN Rscript install_monocle_and_R_dependencies.R && \
     rm install_monocle_and_R_dependencies.R
